@@ -18,8 +18,8 @@ def send_email(frame):
         # Create a multipart message
         msg = MIMEMultipart()
         msg['Subject'] = 'Person Detected'
-        msg['From'] = 'omsagar250403@gmail.com'
-        msg['To'] = "sagarmishra250403@gmail.com"
+        msg['From'] = 'enter_sender_email'
+        msg['To'] = "enter_receiver_email"
         
         # Get current date and time
         now = datetime.now()
@@ -41,8 +41,8 @@ def send_email(frame):
         # Connect to SMTP server and send email
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
-            server.login('omsagar250403@gmail.com', 'enkn zzvr onta qumy')
-            server.sendmail('omsagar250403@gmail.com', "sagarmishra250403@gmail.com", msg.as_string())
+            server.login('enter_sender_email', 'ankn zzvr onta qumy')
+            server.sendmail('enter_sender_email', "enter_receiver_email", msg.as_string())
 
         print("Email sent successfully")
     except Exception as e:
